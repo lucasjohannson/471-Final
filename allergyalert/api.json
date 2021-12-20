@@ -1,0 +1,58 @@
+Login:
+    URL: /api/user/login
+    Method: POST
+    Input: 
+    {
+        "username": "",
+        "password": ""
+    }
+    Output:
+        true
+
+Profile:
+    URL: /api/user/<username>/profile
+    Method: GET
+    Input:
+    Output: 
+    {
+        "Name":"",
+        "Address":"",
+        "Phone":""
+    }
+
+Allergy List:
+    URL: /api/user/<username>/allergies
+    Method: GET
+    Output:
+    [
+        {
+        "AllergyName": "<name>",
+        "HasAllergy" : true 
+        }
+    ]
+
+    Method: POST
+    Input:
+    [
+        {
+        "AllergyName": "<name>",
+        "HasAllergy" : true 
+        }
+    ]
+
+Product List:
+    URL: /api/store/products
+    Method: GET
+    Output:
+    [
+        {
+            "productName": "<name>",
+            "productId": <number>,
+            "productImage": "<url>",
+            "allergens": ['<names>'],
+            "price": <number>
+            //^^discuss in report - allergens names 
+            //are unique so make good primary keys.
+            //no id needed
+        }
+    ]
