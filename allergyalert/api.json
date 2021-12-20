@@ -1,0 +1,55 @@
+Login:
+    URL: /api/user/login
+    Method: POST
+    Input: 
+    {
+        "username": "",
+        "password": ""
+    }
+    Output:
+        true
+
+Profile:
+    URL: /api/user/<username>/profile
+    Method: GET
+    Input:
+    Output: 
+    {
+        "firstName":"",
+        "lastName": "",
+        "address":""
+    }
+
+Allergy List:
+    URL: /api/user/<username>/allergies
+    Method: GET
+    Output:
+    [
+        {
+        "allergyName": "<name>",
+        "hasAllergy" : true 
+        }
+    ]
+
+    Method: POST
+    Input:
+    [
+	"allergy1",
+	"allergy2",
+	...
+    ]
+
+Product List:
+    URL: /api/store/products
+    Method: GET
+    Output:
+    [
+        {
+            "productName": "<name>",
+            "productId": <number>,
+            "productImage": "<url>",
+            "allergens": ['allergy1', 'allergy2', ...],
+            "price": <number>
+
+        }
+    ]

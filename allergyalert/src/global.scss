@@ -1,0 +1,13 @@
+@use '@material/image-list/index' as image-list;
+    
+:global(.my-image-list-standard) {
+    @include image-list.standard-columns(5);
+    max-width: 680px;
+}
+    
+@media (max-width: 599px) {
+    :global(.my-image-list-standard) {
+        @include image-list.standard-columns(3);
+    }
+}
+    
