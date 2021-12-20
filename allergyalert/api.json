@@ -15,9 +15,9 @@ Profile:
     Input:
     Output: 
     {
-        "Name":"",
-        "Address":"",
-        "Phone":""
+        "firstName":"",
+        "lastName": "",
+        "address":""
     }
 
 Allergy List:
@@ -26,18 +26,17 @@ Allergy List:
     Output:
     [
         {
-        "AllergyName": "<name>",
-        "HasAllergy" : true 
+        "allergyName": "<name>",
+        "hasAllergy" : true 
         }
     ]
 
     Method: POST
     Input:
     [
-        {
-        "AllergyName": "<name>",
-        "HasAllergy" : true 
-        }
+	"allergy1",
+	"allergy2",
+	...
     ]
 
 Product List:
@@ -49,10 +48,8 @@ Product List:
             "productName": "<name>",
             "productId": <number>,
             "productImage": "<url>",
-            "allergens": ['<names>'],
+            "allergens": ['allergy1', 'allergy2', ...],
             "price": <number>
-            //^^discuss in report - allergens names 
-            //are unique so make good primary keys.
-            //no id needed
+
         }
     ]
